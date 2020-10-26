@@ -8,14 +8,14 @@ public class Pedido {
     
     private String _clave;
     private String _claveCliente;
-    private String[] _claveProducto;
+    private Producto[] _claveProducto;
     private int[] _cantidadProducto;
     private int _total;
 
     public Pedido(String clave, String claveCliente, int total) {
         this._clave = clave;
         this._claveCliente = claveCliente;
-        this._claveProducto = new String[100];
+        this._claveProducto = new Producto[100];
         this._cantidadProducto = new int[100];
         this._total = total;
     }
@@ -39,11 +39,11 @@ public class Pedido {
         this._claveCliente = _claveCliente;
     }
 
-    public String getClaveProducto(int index) {
+    public Producto getClaveProducto(int index) {
         return _claveProducto[index];
     }
 
-    public void setClaveProducto(String _claveProducto, int index) {
+    public void setClaveProducto(Producto _claveProducto, int index) {
         this._claveProducto[index] = _claveProducto;
     }
 
@@ -54,8 +54,6 @@ public class Pedido {
     public void setCantidadProducto(int _cantidadProducto, int index) {
         this._cantidadProducto[index] = _cantidadProducto;
     }
-    
-    
 
     public int getTotal() {
         return _total;
