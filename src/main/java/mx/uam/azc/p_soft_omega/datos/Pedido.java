@@ -1,4 +1,4 @@
-package mx.uam.azc.p_soft_omega;
+package mx.uam.azc.p_soft_omega.datos;
 
 /**
  *

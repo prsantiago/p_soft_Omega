@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mx.uam.azc.p_soft_omega;
+package mx.uam.azc.p_soft_omega.presentacion;
 
 /**
  *

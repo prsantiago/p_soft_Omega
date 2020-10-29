@@ -3,8 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mx.uam.azc.p_soft_omega;
+package mx.uam.azc.p_soft_omega.servicios;
 
+import mx.uam.azc.p_soft_omega.servicios.Conexion;
+import mx.uam.azc.p_soft_omega.datos.Producto;
+import mx.uam.azc.p_soft_omega.datos.Pedido;
+import mx.uam.azc.p_soft_omega.datos.Cliente;
 import java.sql.*;
 
 /**
