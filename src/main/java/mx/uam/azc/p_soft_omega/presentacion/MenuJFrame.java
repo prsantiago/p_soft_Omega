@@ -29,37 +29,29 @@ public class MenuJFrame extends javax.swing.JFrame {
 
         FrameRegistrarPedido = new javax.swing.JFrame();
         lblRegistrarPedido = new javax.swing.JLabel();
-        lblClienteRP = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        btnComprobarRP = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jLabel9 = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
+        txtfClienteRP = new javax.swing.JTextField();
+        btnComprobarClienteRP = new javax.swing.JButton();
+        txtfProductoRP = new javax.swing.JTextField();
+        btnComprobarProductoRP = new javax.swing.JButton();
+        txtfCantidadRP = new javax.swing.JTextField();
+        lblProductoPedidoRP = new javax.swing.JLabel();
+        lblCantidadPedidoRP = new javax.swing.JLabel();
+        lblPrecioProductoPedidoRP = new javax.swing.JLabel();
+        lblSubtotalPedidoRP = new javax.swing.JLabel();
+        scrpPedidosRP = new javax.swing.JScrollPane();
+        lblTotalPedidoRP = new javax.swing.JLabel();
+        btnAgregarProductoRP = new javax.swing.JButton();
+        btnFinalizarPedidoRP = new javax.swing.JButton();
+        btnRegresarRP = new javax.swing.JButton();
         lblNombreClienteRP = new javax.swing.JLabel();
         lblTelefonoClienteRP = new javax.swing.JLabel();
         lblDireccionClienteRP = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        lblNombreProductoRP = new javax.swing.JLabel();
+        lblCantidadProductoRP = new javax.swing.JLabel();
         lblPrecioProductoRP = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        lblDineroProductoRP = new javax.swing.JLabel();
+        lblPrecioPedidoRP = new javax.swing.JLabel();
+        lblDineroPedidoRP = new javax.swing.JLabel();
         FrameRegistrarCliente = new javax.swing.JFrame();
         lblRegistrarCliente = new javax.swing.JLabel();
         lblNombreRC = new javax.swing.JLabel();
@@ -84,77 +76,79 @@ public class MenuJFrame extends javax.swing.JFrame {
         lblPeriodoRevisarGR = new javax.swing.JLabel();
         btnGenerarReporte = new javax.swing.JButton();
         btnRegresarGR = new javax.swing.JButton();
+        FrameEditarPedido = new javax.swing.JFrame();
+        lblEditarPedido = new javax.swing.JLabel();
+        txtfClienteEP = new javax.swing.JTextField();
+        btnBuscarClienteEP = new javax.swing.JButton();
+        scrpPedidosEP = new javax.swing.JScrollPane();
+        txtfEliminarProductoEP = new javax.swing.JTextField();
+        btnEliminarProductoEP = new javax.swing.JButton();
+        txtfAgregarProductoEP = new javax.swing.JTextField();
+        txtfCantidadProductoEP = new javax.swing.JTextField();
+        btnAgregarProductoEP = new javax.swing.JButton();
+        btnRegresarEP = new javax.swing.JButton();
         lblMenu = new javax.swing.JLabel();
         btnFrameRegistrarPedido = new javax.swing.JButton();
         btnFrameRegistrarCliente = new javax.swing.JButton();
         btnFrameCancelarPedido = new javax.swing.JButton();
         btnFrameGenerarReporte = new javax.swing.JButton();
+        btnFrameEditarPedido = new javax.swing.JButton();
 
         lblRegistrarPedido.setText("Registro de Pedido");
 
-        lblClienteRP.setText("Identificador del Cliente");
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtfClienteRP.setText("Identificador de Cliente");
+        txtfClienteRP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtfClienteRPActionPerformed(evt);
             }
         });
 
-        btnComprobarRP.setText("Comprobar");
+        btnComprobarClienteRP.setText("Comprobar");
 
-        jLabel3.setText("Identificador del Producto");
-
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        txtfProductoRP.setText("Identificador de Producto a agregar");
+        txtfProductoRP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                txtfProductoRPActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Comprobar");
+        btnComprobarProductoRP.setText("Comprobar");
 
-        jLabel4.setText("Ingresa cantidad");
+        txtfCantidadRP.setText("Ingresa cantidad");
 
-        jLabel5.setText("Producto");
+        lblProductoPedidoRP.setText("Producto");
 
-        jLabel6.setText("Cantidad");
+        lblCantidadPedidoRP.setText("Cantidad");
 
-        jLabel7.setText("Precio");
+        lblPrecioProductoPedidoRP.setText("Precio");
 
-        jLabel8.setText("Subtotal");
+        lblSubtotalPedidoRP.setText("Subtotal");
 
-        jLabel9.setText("Total:");
+        lblTotalPedidoRP.setText("Total:");
 
-        jButton4.setText("Agregar Producto");
+        btnAgregarProductoRP.setText("Agregar Producto");
 
-        jButton5.setText("Finalizar Pedido");
+        btnFinalizarPedidoRP.setText("Finalizar Pedido");
 
-        jButton10.setText("Regresar");
+        btnRegresarRP.setText("Regresar");
 
-        lblNombreClienteRP.setText("Nombre:");
+        lblNombreClienteRP.setText("Nombre");
 
-        lblTelefonoClienteRP.setText("Telefono:");
+        lblTelefonoClienteRP.setText("Telefono");
 
-        lblDireccionClienteRP.setText("Direccion:");
+        lblDireccionClienteRP.setText("Direccion");
 
-        jLabel13.setText("Nombre:");
+        lblNombreProductoRP.setText("Nombre");
 
-        jLabel14.setText("Cantidad:");
+        lblCantidadProductoRP.setText("Cantidad");
 
-        jLabel16.setText("$");
+        lblPrecioProductoRP.setText("Precio");
 
-        jLabel17.setText("Precio");
+        lblDineroProductoRP.setText("$");
 
-        jLabel18.setText("$");
+        lblPrecioPedidoRP.setText("Precio");
 
-        jLabel1.setText("jLabel1");
-
-        jLabel2.setText("jLabel2");
-
-        jLabel10.setText("jLabel10");
-
-        jLabel11.setText("jLabel11");
-
-        jLabel12.setText("jLabel12");
+        lblDineroPedidoRP.setText("$");
 
         javax.swing.GroupLayout FrameRegistrarPedidoLayout = new javax.swing.GroupLayout(FrameRegistrarPedido.getContentPane());
         FrameRegistrarPedido.getContentPane().setLayout(FrameRegistrarPedidoLayout);
@@ -166,75 +160,53 @@ public class MenuJFrame extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
-                                .addComponent(lblClienteRP)
+                                .addComponent(txtfClienteRP)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnComprobarRP))
+                                .addComponent(btnComprobarClienteRP))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createSequentialGroup()
                                 .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
+                                        .addComponent(lblProductoPedidoRP)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
+                                        .addComponent(lblCantidadPedidoRP)
+                                        .addGap(74, 74, 74)
+                                        .addComponent(lblPrecioProductoPedidoRP))
+                                    .addComponent(txtfProductoRP)
+                                    .addComponent(txtfCantidadRP, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
                                         .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel3)
-                                            .addComponent(jLabel5))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
-                                                .addComponent(jLabel6)
-                                                .addGap(74, 74, 74)
-                                                .addComponent(jLabel7))
-                                            .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE))
-                                    .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
-                                        .addComponent(jLabel4)
+                                            .addComponent(btnAgregarProductoRP, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createSequentialGroup()
+                                                    .addComponent(lblDineroProductoRP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(lblPrecioProductoRP, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(btnComprobarProductoRP))))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createSequentialGroup()
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel8)
-                                        .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createSequentialGroup()
-                                            .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(lblPrecioProductoRP, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(jButton3))))
-                            .addComponent(jScrollPane1)
+                                        .addComponent(lblSubtotalPedidoRP))))
+                            .addComponent(scrpPedidosRP)
                             .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
-                                .addComponent(jButton10)
+                                .addComponent(btnRegresarRP)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton5))
+                                .addComponent(btnFinalizarPedidoRP))
                             .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
                                 .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
-                                        .addComponent(jLabel14)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel12))
-                                    .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
-                                        .addComponent(jLabel13)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel11))
-                                    .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
-                                        .addComponent(lblNombreClienteRP)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel1))
-                                    .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
-                                        .addComponent(lblTelefonoClienteRP)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel2))
-                                    .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
-                                        .addComponent(lblDireccionClienteRP)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jLabel10)))
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                                    .addComponent(lblCantidadProductoRP)
+                                    .addComponent(lblNombreProductoRP)
+                                    .addComponent(lblNombreClienteRP)
+                                    .addComponent(lblTelefonoClienteRP)
+                                    .addComponent(lblDireccionClienteRP))
+                                .addGap(0, 368, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel9)
+                        .addComponent(lblTotalPedidoRP)
                         .addGap(105, 105, 105)
-                        .addComponent(jLabel18)
+                        .addComponent(lblDineroPedidoRP)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lblPrecioPedidoRP, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -248,58 +220,46 @@ public class MenuJFrame extends javax.swing.JFrame {
                 .addComponent(lblRegistrarPedido)
                 .addGap(18, 18, 18)
                 .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblClienteRP)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnComprobarRP))
+                    .addComponent(txtfClienteRP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnComprobarClienteRP))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNombreClienteRP)
-                    .addComponent(jLabel1))
+                .addComponent(lblNombreClienteRP)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblTelefonoClienteRP)
-                    .addComponent(jLabel2))
+                .addComponent(lblTelefonoClienteRP)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblDireccionClienteRP)
-                    .addComponent(jLabel10))
+                .addComponent(lblDireccionClienteRP)
                 .addGap(23, 23, 23)
                 .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jButton3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnComprobarProductoRP)
+                    .addComponent(txtfProductoRP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
+                    .addComponent(lblNombreProductoRP)
                     .addComponent(lblPrecioProductoRP)
-                    .addComponent(jLabel16)
-                    .addComponent(jLabel11))
+                    .addComponent(lblDineroProductoRP))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(jLabel12))
+                .addComponent(lblCantidadProductoRP)
                 .addGap(25, 25, 25)
                 .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4))
+                    .addComponent(txtfCantidadRP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAgregarProductoRP))
                 .addGap(18, 18, 18)
                 .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel8))
+                    .addComponent(lblProductoPedidoRP)
+                    .addComponent(lblCantidadPedidoRP)
+                    .addComponent(lblPrecioProductoPedidoRP)
+                    .addComponent(lblSubtotalPedidoRP))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(scrpPedidosRP, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel17)
-                    .addComponent(jLabel18))
+                    .addComponent(lblTotalPedidoRP)
+                    .addComponent(lblPrecioPedidoRP)
+                    .addComponent(lblDineroPedidoRP))
                 .addGap(18, 18, 18)
                 .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton10))
+                    .addComponent(btnFinalizarPedidoRP)
+                    .addComponent(btnRegresarRP))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
@@ -409,8 +369,8 @@ public class MenuJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(FrameCancelarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(FrameCancelarPedidoLayout.createSequentialGroup()
-                        .addComponent(txtfClienteCP, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
+                        .addComponent(txtfClienteCP, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(btnBuscarClienteCP)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(scrpPedidosCP)
@@ -496,6 +456,90 @@ public class MenuJFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        lblEditarPedido.setText("Editar Pedido");
+
+        txtfClienteEP.setText("Escribir el número del cliente");
+        txtfClienteEP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtfClienteEPActionPerformed(evt);
+            }
+        });
+
+        btnBuscarClienteEP.setText("Buscar");
+
+        txtfEliminarProductoEP.setText("Clave de producto a eliminar (opcional)");
+
+        btnEliminarProductoEP.setText("Eliminar producto");
+
+        txtfAgregarProductoEP.setText("Clave de producto a agregar (opcional)");
+
+        txtfCantidadProductoEP.setText("Cantidad (opcional)");
+
+        btnAgregarProductoEP.setText("Agregar producto");
+
+        btnRegresarEP.setText("Regresar");
+
+        javax.swing.GroupLayout FrameEditarPedidoLayout = new javax.swing.GroupLayout(FrameEditarPedido.getContentPane());
+        FrameEditarPedido.getContentPane().setLayout(FrameEditarPedidoLayout);
+        FrameEditarPedidoLayout.setHorizontalGroup(
+            FrameEditarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FrameEditarPedidoLayout.createSequentialGroup()
+                .addGroup(FrameEditarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(FrameEditarPedidoLayout.createSequentialGroup()
+                        .addGroup(FrameEditarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(FrameEditarPedidoLayout.createSequentialGroup()
+                                .addGap(168, 168, 168)
+                                .addComponent(lblEditarPedido)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(FrameEditarPedidoLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(txtfClienteEP)
+                                .addGap(18, 18, 18)))
+                        .addComponent(btnBuscarClienteEP, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(FrameEditarPedidoLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(FrameEditarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(scrpPedidosEP)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameEditarPedidoLayout.createSequentialGroup()
+                                .addComponent(btnRegresarEP)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnAgregarProductoEP))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameEditarPedidoLayout.createSequentialGroup()
+                                .addGroup(FrameEditarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtfEliminarProductoEP)
+                                    .addComponent(txtfAgregarProductoEP, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(FrameEditarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtfCantidadProductoEP)
+                                    .addComponent(btnEliminarProductoEP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                .addContainerGap())
+        );
+        FrameEditarPedidoLayout.setVerticalGroup(
+            FrameEditarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FrameEditarPedidoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblEditarPedido)
+                .addGap(18, 18, 18)
+                .addGroup(FrameEditarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtfClienteEP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBuscarClienteEP))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(scrpPedidosEP, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(FrameEditarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtfEliminarProductoEP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnEliminarProductoEP))
+                .addGap(19, 19, 19)
+                .addGroup(FrameEditarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtfCantidadProductoEP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtfAgregarProductoEP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addGroup(FrameEditarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAgregarProductoEP)
+                    .addComponent(btnRegresarEP))
+                .addContainerGap())
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lblMenu.setText("Menu inicial");
@@ -528,6 +572,13 @@ public class MenuJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnFrameEditarPedido.setText("Editar Pedido");
+        btnFrameEditarPedido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFrameEditarPedidoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -539,7 +590,8 @@ public class MenuJFrame extends javax.swing.JFrame {
                     .addComponent(btnFrameRegistrarPedido)
                     .addComponent(btnFrameRegistrarCliente)
                     .addComponent(btnFrameCancelarPedido)
-                    .addComponent(btnFrameGenerarReporte))
+                    .addComponent(btnFrameGenerarReporte)
+                    .addComponent(btnFrameEditarPedido))
                 .addContainerGap(120, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -548,14 +600,16 @@ public class MenuJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(lblMenu)
                 .addGap(18, 18, 18)
-                .addComponent(btnFrameRegistrarPedido)
-                .addGap(18, 18, 18)
                 .addComponent(btnFrameRegistrarCliente)
+                .addGap(18, 18, 18)
+                .addComponent(btnFrameRegistrarPedido)
                 .addGap(18, 18, 18)
                 .addComponent(btnFrameCancelarPedido)
                 .addGap(18, 18, 18)
+                .addComponent(btnFrameEditarPedido)
+                .addGap(18, 18, 18)
                 .addComponent(btnFrameGenerarReporte)
-                .addContainerGap(111, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
 
         pack();
@@ -581,13 +635,9 @@ public class MenuJFrame extends javax.swing.JFrame {
         FrameGenerarReporte.setVisible(true);
     }//GEN-LAST:event_btnFrameGenerarReporteActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtfClienteRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfClienteRPActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txtfClienteRPActionPerformed
 
     private void txtfClienteCPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfClienteCPActionPerformed
         // TODO add your handling code here:
@@ -600,6 +650,19 @@ public class MenuJFrame extends javax.swing.JFrame {
     private void cmbbPeriodoGRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbbPeriodoGRActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cmbbPeriodoGRActionPerformed
+
+    private void btnFrameEditarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFrameEditarPedidoActionPerformed
+        // TODO add your handling code here:
+        FrameEditarPedido.setVisible(true);
+    }//GEN-LAST:event_btnFrameEditarPedidoActionPerformed
+
+    private void txtfClienteEPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfClienteEPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtfClienteEPActionPerformed
+
+    private void txtfProductoRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfProductoRPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtfProductoRPActionPerformed
 
     /**
      * @param args the command line arguments
@@ -638,66 +701,70 @@ public class MenuJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFrame FrameCancelarPedido;
+    private javax.swing.JFrame FrameEditarPedido;
     private javax.swing.JFrame FrameGenerarReporte;
     private javax.swing.JFrame FrameRegistrarCliente;
     private javax.swing.JFrame FrameRegistrarPedido;
+    private javax.swing.JButton btnAgregarProductoEP;
+    private javax.swing.JButton btnAgregarProductoRP;
     private javax.swing.JButton btnBuscarClienteCP;
+    private javax.swing.JButton btnBuscarClienteEP;
     private javax.swing.JButton btnCancelarPedido;
-    private javax.swing.JButton btnComprobarRP;
+    private javax.swing.JButton btnComprobarClienteRP;
+    private javax.swing.JButton btnComprobarProductoRP;
+    private javax.swing.JButton btnEliminarProductoEP;
+    private javax.swing.JButton btnFinalizarPedidoRP;
     private javax.swing.JButton btnFrameCancelarPedido;
+    private javax.swing.JButton btnFrameEditarPedido;
     private javax.swing.JButton btnFrameGenerarReporte;
     private javax.swing.JButton btnFrameRegistrarCliente;
     private javax.swing.JButton btnFrameRegistrarPedido;
     private javax.swing.JButton btnGenerarReporte;
     private javax.swing.JButton btnRegistrarCliente;
     private javax.swing.JButton btnRegresarCP;
+    private javax.swing.JButton btnRegresarEP;
     private javax.swing.JButton btnRegresarGR;
     private javax.swing.JButton btnRegresarRC;
+    private javax.swing.JButton btnRegresarRP;
     private javax.swing.JComboBox<String> cmbbPeriodoGR;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JLabel lblCancelarPedido;
-    private javax.swing.JLabel lblClienteRP;
+    private javax.swing.JLabel lblCantidadPedidoRP;
+    private javax.swing.JLabel lblCantidadProductoRP;
+    private javax.swing.JLabel lblDineroPedidoRP;
+    private javax.swing.JLabel lblDineroProductoRP;
     private javax.swing.JLabel lblDireccionClienteRP;
     private javax.swing.JLabel lblDireccionRC;
+    private javax.swing.JLabel lblEditarPedido;
     private javax.swing.JLabel lblGenerarReporte;
     private javax.swing.JLabel lblMenu;
     private javax.swing.JLabel lblNombreClienteRP;
+    private javax.swing.JLabel lblNombreProductoRP;
     private javax.swing.JLabel lblNombreRC;
     private javax.swing.JLabel lblNumeroIdentificacionRC;
     private javax.swing.JLabel lblPeriodoRevisarGR;
+    private javax.swing.JLabel lblPrecioPedidoRP;
+    private javax.swing.JLabel lblPrecioProductoPedidoRP;
     private javax.swing.JLabel lblPrecioProductoRP;
+    private javax.swing.JLabel lblProductoPedidoRP;
     private javax.swing.JLabel lblRegistrarCliente;
     private javax.swing.JLabel lblRegistrarPedido;
+    private javax.swing.JLabel lblSubtotalPedidoRP;
     private javax.swing.JLabel lblTelefonoClienteRP;
     private javax.swing.JLabel lblTelefonoRC;
+    private javax.swing.JLabel lblTotalPedidoRP;
     private javax.swing.JScrollPane scrpPedidosCP;
+    private javax.swing.JScrollPane scrpPedidosEP;
+    private javax.swing.JScrollPane scrpPedidosRP;
+    private javax.swing.JTextField txtfAgregarProductoEP;
+    private javax.swing.JTextField txtfCantidadProductoEP;
+    private javax.swing.JTextField txtfCantidadRP;
     private javax.swing.JTextField txtfClienteCP;
+    private javax.swing.JTextField txtfClienteEP;
+    private javax.swing.JTextField txtfClienteRP;
     private javax.swing.JTextField txtfDireccionRC;
+    private javax.swing.JTextField txtfEliminarProductoEP;
     private javax.swing.JTextField txtfNombreRC;
+    private javax.swing.JTextField txtfProductoRP;
     private javax.swing.JTextField txtfTelefonoRC;
     // End of variables declaration//GEN-END:variables
 }
