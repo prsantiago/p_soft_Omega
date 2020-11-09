@@ -66,7 +66,7 @@ public class Pedido {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
-        builder.append("DatosPedido [_clave=");
+        builder.append("Pedido [_clave=");
         builder.append(_clave).append('\n');
         builder.append(", _claveCliente=");
         builder.append(_claveCliente).append('\n');

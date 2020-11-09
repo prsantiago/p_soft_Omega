@@ -24,7 +24,14 @@ public class AdministradorCliente {
      * @param conexion A not-null Conexion a la base de datos
      */
     public AdministradorCliente(Conexion conexion) {
-            _conexion = conexion;
+        _conexion = conexion;
+    }
+    
+    /**
+     * Constructor publico
+     * @param conexion A not-null Conexion a la base de datos
+     */
+    public AdministradorCliente() {
     }
 
     /////////////////////////////////////////////
@@ -45,7 +52,7 @@ public class AdministradorCliente {
             throw new ValidationException();
         }
 
-        _conexion.abrirConexion();
+        /*_conexion.abrirConexion();
         try {
             StringBuffer buffer = new StringBuffer(40);
 
@@ -59,7 +66,7 @@ public class AdministradorCliente {
 
         } finally {
             _conexion.cerrarConexion();
-        }
+        }*/
     }
 
     /**

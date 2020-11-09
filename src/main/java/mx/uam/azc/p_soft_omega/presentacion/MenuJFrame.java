@@ -12,18 +12,40 @@ import mx.uam.azc.p_soft_omega.logica.AdministradorCliente;
 import mx.uam.azc.p_soft_omega.logica.AdministradorPedido;
 import mx.uam.azc.p_soft_omega.logica.AdministradorProducto;
 import mx.uam.azc.p_soft_omega.servicios.ConexionMySQL;
+import java.util.ArrayList;
 
 /**
  *
  * @author Santiago PG
  */
 public class MenuJFrame extends javax.swing.JFrame {
+    
+    ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+    ArrayList<Producto> productos = new ArrayList<Producto>();
+    String[] nombreProducto = {"Coca Cola", "Doritos", "Tostitos", "Chocoroles", "Cigarros",
+                               "Paleta Magnum", "Panditas", "Carlos V", "Cerveza", "Jamon",
+                               "Queso", "Tortillas", "Huevo", "Pan", "Agua"};
+    int[] precioProducto = {30, 15, 20, 13, 60,
+                            30, 10, 7, 90, 25,
+                            25, 12, 18, 33, 13};
+    ArrayList<Pedido> pedidos = new ArrayList<Pedido>();
+    
 
     /**
      * Creates new form MenuJFrame
      */
     public MenuJFrame() {
         initComponents();
+        
+        Producto producto = new Producto();
+        for(int i=0; i<nombreProducto.length; ++i) {
+            producto.setClave(Integer.toString(i));
+            producto.setNombre(nombreProducto[i]);
+            producto.setPrecio(precioProducto[i]);
+            producto.setCantidad(20);
+            
+            productos.add(producto);
+        }
     }
 
     /**
@@ -772,7 +794,8 @@ public class MenuJFrame extends javax.swing.JFrame {
         cliente.setTelefono(txtfTelefonoRC.getText());
         cliente.setClave(txtfTelefonoRC.getText());
         
-        // INSERTAR CLIENTE A BD
+        // Agregar cliente a arraylist
+        clientes.add(cliente);
         
         lblNumeroIdentificacionRC.setText("Número de identificación: "+cliente.getClave());
     }//GEN-LAST:event_btnRegistrarClienteActionPerformed
@@ -783,6 +806,11 @@ public class MenuJFrame extends javax.swing.JFrame {
         Cliente cliente = new Cliente();
         
         //BUSCAR EL CLIENTE EN LA BD
+        for(int i=0; i<clientes.size(); ++i) {
+            if(idCliente == clientes.get(i).getClave()) {
+                cliente = clientes.get(i);
+            }
+        }
         
         lblNombreClienteRP.setText(cliente.getNombre());
         lblTelefonoClienteRP.setText(cliente.getTelefono());
@@ -794,7 +822,12 @@ public class MenuJFrame extends javax.swing.JFrame {
         String idProducto = txtfProductoRP.getText();
         Producto producto = new Producto();
         
-        //BUSCAR EL PRODUCTO EN LA BD
+        //BUSCAR EL PRODUCTO EN EL ARRAYLIST
+        for(int i=0; i<productos.size(); ++i) {
+            if(idProducto == productos.get(i).getClave()) {
+                producto = productos.get(i);
+            }
+        }
         
         lblNombreProductoRP.setText(producto.getNombre());
         lblCantidadProductoRP.setText(Integer.toString(producto.getCantidad()));
@@ -823,7 +856,11 @@ public class MenuJFrame extends javax.swing.JFrame {
         String idPedido = txtfPedidoCancelarCP.getText();
         
         //ELIMINAR PEDIDO DE LA BASE DE DATOS
-        
+        for(int i=0; i<pedidos.size(); ++i) {
+            if(idPedido == pedidos.get(i).getClave()) {
+                pedidos.remove(i);
+            }
+        }
         
     }//GEN-LAST:event_btnCancelarPedidoActionPerformed
 

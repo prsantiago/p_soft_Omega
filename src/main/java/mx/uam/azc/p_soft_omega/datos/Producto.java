@@ -56,7 +56,7 @@ public class Producto {
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
-        builder.append("DatosProducto [_clave=");
+        builder.append("Producto [_clave=");
         builder.append(_clave).append('\n');
         builder.append(", _nombre=");
         builder.append(_nombre).append('\n');
