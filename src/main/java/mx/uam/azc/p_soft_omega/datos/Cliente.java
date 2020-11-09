@@ -52,6 +52,19 @@ public class Cliente {
     public void setDireccion(String _direccion) {
         this._direccion = _direccion;
     }
+
+    /**
+     * Validar los datos de un usuario antes de insertar o modificar
+     * @param cliente A not-null instancia de Cliente
+     * @return Un boleano que indica que los valores de cliente son validos
+     */
+    public boolean validarCliente(Cliente cliente) {
+        if(cliente==null || cliente.getClave()==null || cliente.getNombre()==null ||
+           cliente.getTelefono()==null || cliente.getDireccion()==null)
+            return false;
+
+        return true;
+    }
     
     @Override
     public String toString() {

@@ -63,6 +63,25 @@ public class Pedido {
         this._total = _total;
     }
     
+    /**
+    * Validar los datos de un pedido antes de insertar o modificar
+    * @param pedido A not-null instancia de Pedido
+    * @return Un boleano que indica que los valores de Pedido son validos
+    */
+    private boolean validarPedido(Pedido pedido) {
+        if(pedido==null || pedido.getClave()==null || pedido.getClaveCliente()==null ||
+           pedido.getTotal() <= 0)
+            return false;
+
+        for (int i=0; i<5; ++i) {
+            if(pedido.getClaveProducto(i) == null || 
+               pedido.getCantidadProducto(i) <= 0)
+                return false;
+        }
+
+        return true;
+    }
+    
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();

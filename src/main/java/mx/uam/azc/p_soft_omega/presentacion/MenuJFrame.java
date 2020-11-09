@@ -8,10 +8,6 @@ package mx.uam.azc.p_soft_omega.presentacion;
 import mx.uam.azc.p_soft_omega.datos.Cliente;
 import mx.uam.azc.p_soft_omega.datos.Pedido;
 import mx.uam.azc.p_soft_omega.datos.Producto;
-import mx.uam.azc.p_soft_omega.logica.AdministradorCliente;
-import mx.uam.azc.p_soft_omega.logica.AdministradorPedido;
-import mx.uam.azc.p_soft_omega.logica.AdministradorProducto;
-import mx.uam.azc.p_soft_omega.servicios.ConexionMySQL;
 import java.util.ArrayList;
 
 /**
@@ -29,7 +25,8 @@ public class MenuJFrame extends javax.swing.JFrame {
                             30, 10, 7, 90, 25,
                             25, 12, 18, 33, 13};
     ArrayList<Pedido> pedidos = new ArrayList<Pedido>();
-    
+    int numProdPedido = 0;
+    int clavePedidos = 0;
 
     /**
      * Creates new form MenuJFrame
@@ -39,7 +36,7 @@ public class MenuJFrame extends javax.swing.JFrame {
         
         Producto producto = new Producto();
         for(int i=0; i<nombreProducto.length; ++i) {
-            producto.setClave(Integer.toString(i));
+            producto.setClave(Integer.toString(i)+1);
             producto.setNombre(nombreProducto[i]);
             producto.setPrecio(precioProducto[i]);
             producto.setCantidad(20);
@@ -798,6 +795,8 @@ public class MenuJFrame extends javax.swing.JFrame {
         clientes.add(cliente);
         
         lblNumeroIdentificacionRC.setText("Número de identificación: "+cliente.getClave());
+        
+        FrameRegistrarCliente.setVisible(false);
     }//GEN-LAST:event_btnRegistrarClienteActionPerformed
 
     private void btnComprobarClienteRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprobarClienteRPActionPerformed
@@ -836,18 +835,50 @@ public class MenuJFrame extends javax.swing.JFrame {
 
     private void btnAgregarProductoRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarProductoRPActionPerformed
         // TODO add your handling code here:
+        Pedido pedido = new Pedido();
+        Producto producto = new Producto();
+        String idProducto = txtfProductoRP.getText();
+        int cantidad = Integer.parseInt(txtfCantidadRP.getText());
+        
+        for(int i=0; i<productos.size(); ++i) {
+            if(idProducto == productos.get(i).getClave()) {
+                producto = productos.get(i);
+            }
+        }
+        
+        pedido.setClaveProducto(producto, numProdPedido);
+        pedido.setCantidadProducto(cantidad, numProdPedido);
+        pedido.setTotal(pedido.getTotal()+(producto.getPrecio()*cantidad));
+        
+        ++numProdPedido;
+        pedidos.add(pedido);
     }//GEN-LAST:event_btnAgregarProductoRPActionPerformed
 
     private void btnFinalizarPedidoRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinalizarPedidoRPActionPerformed
         // TODO add your handling code here:
+        int sizePedido = pedidos.size();
+        Pedido pedido = pedidos.get(sizePedido-1);
+        
+        pedido.setClave(Integer.toString(++clavePedidos));
+        pedido.setClaveCliente(txtfClienteRP.getText());
+        
+        numProdPedido = 0;
+        
+        FrameRegistrarPedido.setVisible(false);
     }//GEN-LAST:event_btnFinalizarPedidoRPActionPerformed
 
     private void btnBuscarClienteCPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarClienteCPActionPerformed
         // TODO add your handling code here:
         String idCliente = txtfClienteCP.getText();
+        Pedido pedido = new Pedido();
         
         //BUSCAR PEDIDOS QUE TENGA EL CLIENTE EN LA BD
-        
+        for(int i=0; i<pedidos.size(); ++i) {
+            if(idCliente == pedidos.get(i).getClaveCliente()) {
+                pedido = pedidos.get(i);
+                //Agregar datos del pedido al scrollpane
+            }
+        }
         
     }//GEN-LAST:event_btnBuscarClienteCPActionPerformed
 
@@ -862,6 +893,7 @@ public class MenuJFrame extends javax.swing.JFrame {
             }
         }
         
+        FrameCancelarPedido.setVisible(false);
     }//GEN-LAST:event_btnCancelarPedidoActionPerformed
 
     /**
@@ -898,10 +930,6 @@ public class MenuJFrame extends javax.swing.JFrame {
             }
         });
     }
-    
-    AdministradorCliente adminCliente = new AdministradorCliente(new ConexionMySQL());
-    AdministradorPedido adminPedido = new AdministradorPedido(new ConexionMySQL());
-    AdministradorProducto adminProducto = new AdministradorProducto(new ConexionMySQL());
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JFrame FrameCancelarPedido;
