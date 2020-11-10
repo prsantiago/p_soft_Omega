@@ -1,5 +1,7 @@
 package mx.uam.azc.p_soft_omega.datos;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Omega
@@ -8,19 +10,21 @@ public class Pedido {
     
     private String _clave;
     private String _claveCliente;
-    private Producto[] _claveProducto;
-    private int[] _cantidadProducto;
+    private ArrayList<Producto> _claveProducto;
+    private ArrayList<Integer> _cantidadProducto;
     private int _total;
 
     public Pedido(String clave, String claveCliente, int total) {
         this._clave = clave;
         this._claveCliente = claveCliente;
-        this._claveProducto = new Producto[100];
-        this._cantidadProducto = new int[100];
+        this._claveProducto = new ArrayList<Producto>();
+        this._cantidadProducto = new ArrayList<Integer>();
         this._total = total;
     }
     
     public Pedido() {
+        this._claveProducto = new ArrayList<Producto>();
+        this._cantidadProducto = new ArrayList<Integer>();
     }
 
     public String getClave() {
@@ -40,19 +44,23 @@ public class Pedido {
     }
 
     public Producto getClaveProducto(int index) {
-        return _claveProducto[index];
+        return _claveProducto.get(index);
     }
 
-    public void setClaveProducto(Producto _claveProducto, int index) {
-        this._claveProducto[index] = _claveProducto;
+    public void setClaveProducto(Producto _claveProducto) {
+        this._claveProducto.add(_claveProducto);
     }
 
     public int getCantidadProducto(int index) {
-        return _cantidadProducto[index];
+        return _cantidadProducto.get(index);
     }
 
-    public void setCantidadProducto(int _cantidadProducto, int index) {
-        this._cantidadProducto[index] = _cantidadProducto;
+    public void setCantidadProducto(int _cantidadProducto) {
+        this._cantidadProducto.add(_cantidadProducto);
+    }
+    
+    public int getSizeProductos() {
+        return this._claveProducto.size();
     }
 
     public int getTotal() {

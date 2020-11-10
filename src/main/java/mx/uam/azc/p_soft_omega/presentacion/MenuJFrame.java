@@ -25,7 +25,7 @@ public class MenuJFrame extends javax.swing.JFrame {
                             30, 10, 7, 90, 25,
                             25, 12, 18, 33, 13};
     ArrayList<Pedido> pedidos = new ArrayList<Pedido>();
-    int numProdPedido = 0;
+    //int numProdPedido = 0;
     int clavePedidos = 0;
 
     /**
@@ -81,6 +81,9 @@ public class MenuJFrame extends javax.swing.JFrame {
         lblPrecioPedidoRP = new javax.swing.JLabel();
         lblDineroPedidoRP = new javax.swing.JLabel();
         lblIdentificadorPedidoRP = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         FrameRegistrarCliente = new javax.swing.JFrame();
         lblRegistrarCliente = new javax.swing.JLabel();
         lblNombreRC = new javax.swing.JLabel();
@@ -145,7 +148,6 @@ public class MenuJFrame extends javax.swing.JFrame {
 
         lblRegistrarPedido.setText("Registro de Pedido");
 
-        txtfClienteRP.setText("Identificador de Cliente");
         txtfClienteRP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtfClienteRPActionPerformed(evt);
@@ -159,7 +161,6 @@ public class MenuJFrame extends javax.swing.JFrame {
             }
         });
 
-        txtfProductoRP.setText("Identificador de Producto a agregar");
         txtfProductoRP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtfProductoRPActionPerformed(evt);
@@ -173,7 +174,11 @@ public class MenuJFrame extends javax.swing.JFrame {
             }
         });
 
-        txtfCantidadRP.setText("Ingresa cantidad");
+        txtfCantidadRP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtfCantidadRPActionPerformed(evt);
+            }
+        });
 
         lblProductoPedidoRP.setText("Producto");
 
@@ -208,15 +213,15 @@ public class MenuJFrame extends javax.swing.JFrame {
             }
         });
 
-        lblNombreClienteRP.setText("Nombre");
+        lblNombreClienteRP.setText("Nombre:");
 
-        lblTelefonoClienteRP.setText("Telefono");
+        lblTelefonoClienteRP.setText("Teléfono:");
 
-        lblDireccionClienteRP.setText("Direccion");
+        lblDireccionClienteRP.setText("Dirección:");
 
-        lblNombreProductoRP.setText("Nombre");
+        lblNombreProductoRP.setText("Nombre:");
 
-        lblCantidadProductoRP.setText("Cantidad");
+        lblCantidadProductoRP.setText("Stock:");
 
         lblPrecioProductoRP.setText("Precio");
 
@@ -226,7 +231,13 @@ public class MenuJFrame extends javax.swing.JFrame {
 
         lblDineroPedidoRP.setText("$");
 
-        lblIdentificadorPedidoRP.setText("Identificador del pedido");
+        lblIdentificadorPedidoRP.setText("Identificador del Pedido:");
+
+        jLabel1.setText("Identificador Cliente");
+
+        jLabel2.setText("Identificador  Producto");
+
+        jLabel3.setText("Cantidad a agregar");
 
         javax.swing.GroupLayout FrameRegistrarPedidoLayout = new javax.swing.GroupLayout(FrameRegistrarPedido.getContentPane());
         FrameRegistrarPedido.getContentPane().setLayout(FrameRegistrarPedidoLayout);
@@ -237,20 +248,32 @@ public class MenuJFrame extends javax.swing.JFrame {
                     .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(scrpPedidosRP)
                             .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
-                                .addComponent(txtfClienteRP)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnComprobarClienteRP))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createSequentialGroup()
                                 .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblCantidadProductoRP)
+                                    .addComponent(lblNombreProductoRP)
+                                    .addComponent(lblNombreClienteRP)
+                                    .addComponent(lblTelefonoClienteRP)
+                                    .addComponent(lblDireccionClienteRP))
+                                .addGap(0, 364, Short.MAX_VALUE))
+                            .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
+                                .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel2)
+                                    .addComponent(lblProductoPedidoRP)
+                                    .addComponent(jLabel3))
+                                .addGap(18, 18, 18)
+                                .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtfClienteRP)
+                                    .addComponent(txtfProductoRP, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
-                                        .addComponent(lblProductoPedidoRP)
+                                        .addComponent(lblCantidadPedidoRP)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(lblCantidadPedidoRP))
-                                    .addComponent(txtfProductoRP)
+                                        .addComponent(lblPrecioProductoPedidoRP))
                                     .addComponent(txtfCantidadRP, javax.swing.GroupLayout.Alignment.TRAILING))
                                 .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createSequentialGroup()
                                         .addGap(18, 18, 18)
                                         .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(btnAgregarProductoRP, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -261,18 +284,8 @@ public class MenuJFrame extends javax.swing.JFrame {
                                                     .addComponent(lblPrecioProductoRP, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addComponent(btnComprobarProductoRP))))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(lblPrecioProductoPedidoRP)
-                                        .addGap(32, 32, 32))))
-                            .addComponent(scrpPedidosRP)
-                            .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
-                                .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblCantidadProductoRP)
-                                    .addComponent(lblNombreProductoRP)
-                                    .addComponent(lblNombreClienteRP)
-                                    .addComponent(lblTelefonoClienteRP)
-                                    .addComponent(lblDireccionClienteRP))
-                                .addGap(0, 368, Short.MAX_VALUE))))
+                                        .addGap(50, 50, 50)
+                                        .addComponent(btnComprobarClienteRP))))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(lblTotalPedidoRP)
@@ -287,13 +300,14 @@ public class MenuJFrame extends javax.swing.JFrame {
                 .addGap(167, 167, 167))
             .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnRegresarRP)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnRegistrarPedidoRP)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblIdentificadorPedidoRP)
+                .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
+                        .addComponent(btnRegresarRP)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnRegistrarPedidoRP))
+                    .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
+                        .addComponent(lblIdentificadorPedidoRP)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         FrameRegistrarPedidoLayout.setVerticalGroup(
@@ -304,7 +318,8 @@ public class MenuJFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtfClienteRP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnComprobarClienteRP))
+                    .addComponent(btnComprobarClienteRP)
+                    .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblNombreClienteRP)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -314,7 +329,8 @@ public class MenuJFrame extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnComprobarProductoRP)
-                    .addComponent(txtfProductoRP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtfProductoRP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNombreProductoRP)
@@ -325,7 +341,8 @@ public class MenuJFrame extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtfCantidadRP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAgregarProductoRP))
+                    .addComponent(btnAgregarProductoRP)
+                    .addComponent(jLabel3))
                 .addGap(18, 18, 18)
                 .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblProductoPedidoRP)
@@ -369,7 +386,7 @@ public class MenuJFrame extends javax.swing.JFrame {
             }
         });
 
-        lblNumeroIdentificacionRC.setText("Número de identificación");
+        lblNumeroIdentificacionRC.setText("Número identificador:");
 
         javax.swing.GroupLayout FrameRegistrarClienteLayout = new javax.swing.GroupLayout(FrameRegistrarCliente.getContentPane());
         FrameRegistrarCliente.getContentPane().setLayout(FrameRegistrarClienteLayout);
@@ -959,11 +976,27 @@ public class MenuJFrame extends javax.swing.JFrame {
 
     private void btnRegresarRCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarRCActionPerformed
         // TODO add your handling code here:
+        txtfNombreRC.setText("");
+        txtfTelefonoRC.setText("");
+        txtfDireccionRC.setText("");
+        lblNumeroIdentificacionRC.setText("Número identificador:");
         FrameRegistrarCliente.setVisible(false);
     }//GEN-LAST:event_btnRegresarRCActionPerformed
 
     private void btnRegresarRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarRPActionPerformed
         // TODO add your handling code here:
+        txtfClienteRP.setText("");
+        txtfProductoRP.setText("");
+        txtfCantidadRP.setText("");
+        txtaPedidosRP.setText("");
+        lblNombreClienteRP.setText("Nombre:");
+        lblTelefonoClienteRP.setText("Teléfono:");
+        lblDireccionClienteRP.setText("Dirreción:");
+        lblNombreProductoRP.setText("Nombre:");
+        lblCantidadProductoRP.setText("Stock:");
+        lblPrecioProductoRP.setText("Precio");
+        lblPrecioPedidoRP.setText("Precio");
+        lblIdentificadorPedidoRP.setText("Identificador del Pedido:");
         FrameRegistrarPedido.setVisible(false);
     }//GEN-LAST:event_btnRegresarRPActionPerformed
 
@@ -993,7 +1026,7 @@ public class MenuJFrame extends javax.swing.JFrame {
         // Agregar cliente a arraylist
         clientes.add(cliente);
         
-        lblNumeroIdentificacionRC.setText("Número de identificación: "+cliente.getClave());
+        lblNumeroIdentificacionRC.setText("Número identificador: "+cliente.getClave());
         
         //FrameRegistrarCliente.setVisible(false);
     }//GEN-LAST:event_btnRegistrarClienteActionPerformed
@@ -1005,15 +1038,15 @@ public class MenuJFrame extends javax.swing.JFrame {
         
         //BUSCAR EL CLIENTE EN LA BD
         for(int i=0; i<clientes.size(); ++i) {
-            if(idCliente.equals(clientes.get(i).getClave())) {
-                cliente = clientes.get(i);
+            cliente = clientes.get(i);
+            if(idCliente.equals(cliente.getClave())) {
                 break;
             }
         }
         
-        lblNombreClienteRP.setText(cliente.getNombre());
-        lblTelefonoClienteRP.setText(cliente.getTelefono());
-        lblDireccionClienteRP.setText(cliente.getDireccion());
+        lblNombreClienteRP.setText("Nombre: "+cliente.getNombre());
+        lblTelefonoClienteRP.setText("Teléfono: "+cliente.getTelefono());
+        lblDireccionClienteRP.setText("Dirección: "+cliente.getDireccion());
     }//GEN-LAST:event_btnComprobarClienteRPActionPerformed
 
     private void btnComprobarProductoRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprobarProductoRPActionPerformed
@@ -1023,53 +1056,63 @@ public class MenuJFrame extends javax.swing.JFrame {
         
         //BUSCAR EL PRODUCTO EN EL ARRAYLIST
         for(int i=0; i<productos.size(); ++i) {
-            if(idProducto.equals(productos.get(i).getClave())) {
-                producto = productos.get(i);
+            producto = productos.get(i);
+            if(idProducto.equals(producto.getClave())) {
                 break;
             }
         }
         
-        lblNombreProductoRP.setText(producto.getNombre());
-        lblCantidadProductoRP.setText(Integer.toString(producto.getCantidad()));
+        lblNombreProductoRP.setText("Nombre: "+producto.getNombre());
+        lblCantidadProductoRP.setText("Stock: "+Integer.toString(producto.getCantidad()));
         lblPrecioProductoRP.setText(Integer.toString(producto.getPrecio()));
     }//GEN-LAST:event_btnComprobarProductoRPActionPerformed
 
     private void btnAgregarProductoRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarProductoRPActionPerformed
         // TODO add your handling code here:
-        Pedido pedido = new Pedido();
+        Pedido pedido;
+        if(pedidos.size() == clavePedidos) {
+            pedido = new Pedido();
+            pedidos.add(pedido);
+        } else {
+            pedido = pedidos.get(clavePedidos);
+        }
+            
         Producto producto = new Producto();
         String idProducto = txtfProductoRP.getText();
         int cantidad = Integer.parseInt(txtfCantidadRP.getText());
-        int stock;
         
         for(int i=0; i<productos.size(); ++i) {
-            if(idProducto.equals(productos.get(i).getClave())) {
-                producto = productos.get(i);
+            producto = productos.get(i);
+            if(idProducto.equals(producto.getClave())) {
                 break;
             }
         }
         
-        pedido.setClaveProducto(producto, numProdPedido);
-        pedido.setCantidadProducto(cantidad, numProdPedido);
-        pedido.setTotal(pedido.getTotal()+(producto.getPrecio()*cantidad));
+        pedido.setClaveProducto(producto);
+        pedido.setCantidadProducto(cantidad);
+        int total = pedido.getTotal()+(producto.getPrecio()*cantidad);
+        pedido.setTotal(total);
+        lblPrecioPedidoRP.setText(Integer.toString(total));
+        txtaPedidosRP.append(producto.getNombre()+
+                             "\t\t"+cantidad+
+                             "\t\t"+"$ "+Integer.toString(producto.getPrecio())+"\n");
         
-        ++numProdPedido;
-        stock = producto.getCantidad();
+        //++numProdPedido;
+        int stock = producto.getCantidad();
         producto.setCantidad(stock-cantidad);
-        pedidos.add(pedido);
     }//GEN-LAST:event_btnAgregarProductoRPActionPerformed
 
     private void btnRegistrarPedidoRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarPedidoRPActionPerformed
         // TODO add your handling code here:
         int sizePedido = pedidos.size();
-        Pedido pedido = pedidos.get(sizePedido);
+        Pedido pedido = pedidos.get(sizePedido-1);
         
         ++clavePedidos;
-        lblIdentificadorPedidoRP.setText(Integer.toString(clavePedidos));
+        lblIdentificadorPedidoRP.setText("Identificador del Pedido: "+Integer.toString(clavePedidos));
         pedido.setClave(Integer.toString(clavePedidos));
         pedido.setClaveCliente(txtfClienteRP.getText());
         
-        numProdPedido = 0;
+        //numProdPedido = 0;
         
         //FrameRegistrarPedido.setVisible(false);
     }//GEN-LAST:event_btnRegistrarPedidoRPActionPerformed
@@ -1081,8 +1124,8 @@ public class MenuJFrame extends javax.swing.JFrame {
         
         //BUSCAR PEDIDOS QUE TENGA EL CLIENTE EN LA BD
         for(int i=0; i<pedidos.size(); ++i) {
-            if(idCliente.equals(pedidos.get(i).getClaveCliente())) {
-                pedido = pedidos.get(i);
+            pedido = pedidos.get(i);
+            if(idCliente.equals(pedido.getClaveCliente())) {
                 break;
             }
         }
@@ -1134,20 +1177,30 @@ public class MenuJFrame extends javax.swing.JFrame {
         Pedido pedido = new Pedido();
         
         for(int i=0; i<pedidos.size(); ++i) {
-            if(idPedido.equals(pedidos.get(i).getClave())) {
-                pedido = pedidos.get(i);
+            pedido = pedidos.get(i);
+            if(idPedido.equals(pedido.getClave())) {
                 break;
             }
         }
         
         //Desplegar datos de pedido en text area
-        
+        txtaPedidosPP.append(pedido.getClaveCliente());
+        for(int i=0; i<pedido.getSizeProductos(); ++i) {
+            txtaPedidosPP.append(pedido.getClaveProducto(i)+
+                                 "\t"+
+                                 Integer.toString(pedido.getCantidadProducto(i)));
+        }
+        txtaPedidosPP.append(Integer.toString(pedido.getTotal()));
     }//GEN-LAST:event_btnRevisarPPActionPerformed
 
     private void btnRegresarFPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarFPActionPerformed
         // TODO add your handling code here:
         FrameFinalizarPedido.setVisible(false);
     }//GEN-LAST:event_btnRegresarFPActionPerformed
+
+    private void txtfCantidadRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfCantidadRPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtfCantidadRPActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1221,6 +1274,9 @@ public class MenuJFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnRegresarRP;
     private javax.swing.JButton btnRevisarPP;
     private javax.swing.JComboBox<String> cmbbPeriodoGR;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblCancelarPedido;
     private javax.swing.JLabel lblCantidadPedidoRP;
     private javax.swing.JLabel lblCantidadProductoRP;

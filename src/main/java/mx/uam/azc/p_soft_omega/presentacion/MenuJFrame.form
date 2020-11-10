@@ -12,23 +12,37 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="txtfClienteRP" max="32767" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="btnComprobarClienteRP" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
+                              <Component id="scrpPedidosRP" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblCantidadProductoRP" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblNombreProductoRP" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblNombreClienteRP" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblTelefonoClienteRP" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblDireccionClienteRP" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="0" pref="364" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblProductoPedidoRP" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="txtfClienteRP" max="32767" attributes="0"/>
+                                      <Component id="txtfProductoRP" alignment="1" max="32767" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="lblProductoPedidoRP" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
                                           <Component id="lblCantidadPedidoRP" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="lblPrecioProductoPedidoRP" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="txtfProductoRP" max="32767" attributes="0"/>
                                       <Component id="txtfCantidadRP" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="btnAgregarProductoRP" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -43,22 +57,10 @@
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="lblPrecioProductoPedidoRP" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                                          <Component id="btnComprobarClienteRP" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                              </Group>
-                              <Component id="scrpPedidosRP" alignment="0" max="32767" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblCantidadProductoRP" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblNombreProductoRP" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblNombreClienteRP" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblTelefonoClienteRP" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblDireccionClienteRP" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="0" pref="368" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -78,16 +80,19 @@
                   <Component id="lblRegistrarPedido" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="167" max="-2" attributes="0"/>
               </Group>
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="btnRegresarRP" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="btnRegistrarPedidoRP" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="lblIdentificadorPedidoRP" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="btnRegresarRP" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="btnRegistrarPedidoRP" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="lblIdentificadorPedidoRP" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -101,6 +106,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txtfClienteRP" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnComprobarClienteRP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="lblNombreClienteRP" min="-2" max="-2" attributes="0"/>
@@ -112,6 +118,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnComprobarProductoRP" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtfProductoRP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -125,6 +132,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txtfCantidadRP" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnAgregarProductoRP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -159,9 +167,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtfClienteRP">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Identificador de Cliente"/>
-          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtfClienteRPActionPerformed"/>
           </Events>
@@ -175,9 +180,6 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtfProductoRP">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Identificador de Producto a agregar"/>
-          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtfProductoRPActionPerformed"/>
           </Events>
@@ -191,9 +193,9 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtfCantidadRP">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Ingresa cantidad"/>
-          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtfCantidadRPActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="lblProductoPedidoRP">
           <Properties>
@@ -253,27 +255,27 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lblNombreClienteRP">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Nombre"/>
+            <Property name="text" type="java.lang.String" value="Nombre:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblTelefonoClienteRP">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Telefono"/>
+            <Property name="text" type="java.lang.String" value="Tel&#xe9;fono:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblDireccionClienteRP">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Direccion"/>
+            <Property name="text" type="java.lang.String" value="Direcci&#xf3;n:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblNombreProductoRP">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Nombre"/>
+            <Property name="text" type="java.lang.String" value="Nombre:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblCantidadProductoRP">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Cantidad"/>
+            <Property name="text" type="java.lang.String" value="Stock:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblPrecioProductoRP">
@@ -298,7 +300,22 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lblIdentificadorPedidoRP">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Identificador del pedido"/>
+            <Property name="text" type="java.lang.String" value="Identificador del Pedido:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Identificador Cliente"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Identificador  Producto"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cantidad a agregar"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -434,7 +451,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lblNumeroIdentificacionRC">
           <Properties>
-            <Property name="text" type="java.lang.String" value="N&#xfa;mero de identificaci&#xf3;n"/>
+            <Property name="text" type="java.lang.String" value="N&#xfa;mero identificador:"/>
           </Properties>
         </Component>
       </SubComponents>
