@@ -13,13 +13,15 @@ public class Pedido {
     private ArrayList<Producto> _claveProducto;
     private ArrayList<Integer> _cantidadProducto;
     private int _total;
+    private String _estado;
 
-    public Pedido(String clave, String claveCliente, int total) {
+    public Pedido(String clave, String claveCliente, int total, String _estado) {
         this._clave = clave;
         this._claveCliente = claveCliente;
         this._claveProducto = new ArrayList<Producto>();
         this._cantidadProducto = new ArrayList<Integer>();
         this._total = total;
+        this._estado = _estado;
     }
     
     public Pedido() {
@@ -70,6 +72,14 @@ public class Pedido {
     public void setTotal(int _total) {
         this._total = _total;
     }
+
+    public String getEstado() {
+        return _estado;
+    }
+
+    public void setEstado(String _estado) {
+        this._estado = _estado;
+    }    
     
     /**
     * Validar los datos de un pedido antes de insertar o modificar

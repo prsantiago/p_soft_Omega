@@ -16,6 +16,9 @@ import java.util.ArrayList;
  */
 public class MenuJFrame extends javax.swing.JFrame {
     
+    private static final int WIDTH = 450;
+    private static final int HEIGHT = 350;
+    
     ArrayList<Cliente> clientes = new ArrayList<Cliente>();
     ArrayList<Producto> productos = new ArrayList<Producto>();
     String[] nombreProducto = {"Coca Cola", "Doritos", "Tostitos", "Chocoroles", "Cigarros",
@@ -84,6 +87,7 @@ public class MenuJFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         FrameRegistrarCliente = new javax.swing.JFrame();
         lblRegistrarCliente = new javax.swing.JLabel();
         lblNombreRC = new javax.swing.JLabel();
@@ -137,6 +141,11 @@ public class MenuJFrame extends javax.swing.JFrame {
         btnRegresarPP = new javax.swing.JButton();
         txtfPedidoRevisarPP = new javax.swing.JTextField();
         btnRevisarPP = new javax.swing.JButton();
+        lblPedidoRevisarPP = new javax.swing.JLabel();
+        btnRegresarPedidosPP = new javax.swing.JButton();
+        btnEnviadoPP = new javax.swing.JButton();
+        lblPedidoEnviarPP = new javax.swing.JLabel();
+        txtfPedidoEnviarPP = new javax.swing.JTextField();
         lblMenu = new javax.swing.JLabel();
         btnFrameRegistrarPedido = new javax.swing.JButton();
         btnFrameRegistrarCliente = new javax.swing.JButton();
@@ -239,6 +248,13 @@ public class MenuJFrame extends javax.swing.JFrame {
 
         jLabel3.setText("Cantidad a agregar");
 
+        jButton1.setText("Nuevo Pedido");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout FrameRegistrarPedidoLayout = new javax.swing.GroupLayout(FrameRegistrarPedido.getContentPane());
         FrameRegistrarPedido.getContentPane().setLayout(FrameRegistrarPedidoLayout);
         FrameRegistrarPedidoLayout.setHorizontalGroup(
@@ -256,7 +272,7 @@ public class MenuJFrame extends javax.swing.JFrame {
                                     .addComponent(lblNombreClienteRP)
                                     .addComponent(lblTelefonoClienteRP)
                                     .addComponent(lblDireccionClienteRP))
-                                .addGap(0, 364, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
                                 .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel1)
@@ -269,23 +285,19 @@ public class MenuJFrame extends javax.swing.JFrame {
                                     .addComponent(txtfProductoRP, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
                                         .addComponent(lblCantidadPedidoRP)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                                         .addComponent(lblPrecioProductoPedidoRP))
                                     .addComponent(txtfCantidadRP, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGap(18, 18, 18)
                                 .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(btnAgregarProductoRP, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createSequentialGroup()
-                                                    .addComponent(lblDineroProductoRP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                    .addComponent(lblPrecioProductoRP, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                .addComponent(btnComprobarProductoRP))))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createSequentialGroup()
-                                        .addGap(50, 50, 50)
-                                        .addComponent(btnComprobarClienteRP))))))
+                                    .addComponent(btnAgregarProductoRP, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createSequentialGroup()
+                                            .addComponent(lblDineroProductoRP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(lblPrecioProductoRP, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(btnComprobarProductoRP))
+                                    .addComponent(btnComprobarClienteRP, javax.swing.GroupLayout.Alignment.TRAILING)))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameRegistrarPedidoLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(lblTotalPedidoRP)
@@ -304,6 +316,8 @@ public class MenuJFrame extends javax.swing.JFrame {
                     .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
                         .addComponent(btnRegresarRP)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(45, 45, 45)
                         .addComponent(btnRegistrarPedidoRP))
                     .addGroup(FrameRegistrarPedidoLayout.createSequentialGroup()
                         .addComponent(lblIdentificadorPedidoRP)
@@ -360,7 +374,8 @@ public class MenuJFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(FrameRegistrarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRegresarRP)
-                    .addComponent(btnRegistrarPedidoRP))
+                    .addComponent(btnRegistrarPedidoRP)
+                    .addComponent(jButton1))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -450,7 +465,7 @@ public class MenuJFrame extends javax.swing.JFrame {
                 .addGroup(FrameRegistrarClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRegresarRC)
                     .addComponent(btnRegistrarCliente))
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
 
         lblCancelarPedido.setText("Cancelación de Pedido");
@@ -595,7 +610,7 @@ public class MenuJFrame extends javax.swing.JFrame {
                 .addGroup(FrameGenerarReporteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cmbbPeriodoGR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblPeriodoRevisarGR))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
                 .addGroup(FrameGenerarReporteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGenerarReporte)
                     .addComponent(btnRegresarGR))
@@ -662,7 +677,7 @@ public class MenuJFrame extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FrameEditarPedidoLayout.createSequentialGroup()
                                 .addGroup(FrameEditarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtfEliminarProductoEP)
-                                    .addComponent(txtfAgregarProductoEP, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE))
+                                    .addComponent(txtfAgregarProductoEP, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE))
                                 .addGap(18, 18, 18)
                                 .addGroup(FrameEditarPedidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(txtfCantidadProductoEP)
@@ -767,6 +782,12 @@ public class MenuJFrame extends javax.swing.JFrame {
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
+        FramePedidosPendientes.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                FramePedidosPendientesComponentShown(evt);
+            }
+        });
+
         lblPedidosPendientes.setText("Pedidos pendientes");
 
         txtaPedidosPP.setColumns(20);
@@ -780,7 +801,11 @@ public class MenuJFrame extends javax.swing.JFrame {
             }
         });
 
-        txtfPedidoRevisarPP.setText("Identificador de pedido a revisar");
+        txtfPedidoRevisarPP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtfPedidoRevisarPPActionPerformed(evt);
+            }
+        });
 
         btnRevisarPP.setText("Revisar");
         btnRevisarPP.addActionListener(new java.awt.event.ActionListener() {
@@ -789,29 +814,56 @@ public class MenuJFrame extends javax.swing.JFrame {
             }
         });
 
+        lblPedidoRevisarPP.setText("Pedido a revisar");
+
+        btnRegresarPedidosPP.setText("Regresar a Pedidos");
+        btnRegresarPedidosPP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegresarPedidosPPActionPerformed(evt);
+            }
+        });
+
+        btnEnviadoPP.setText("Enviado");
+        btnEnviadoPP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEnviadoPPActionPerformed(evt);
+            }
+        });
+
+        lblPedidoEnviarPP.setText("Pedido a envar");
+
         javax.swing.GroupLayout FramePedidosPendientesLayout = new javax.swing.GroupLayout(FramePedidosPendientes.getContentPane());
         FramePedidosPendientes.getContentPane().setLayout(FramePedidosPendientesLayout);
         FramePedidosPendientesLayout.setHorizontalGroup(
             FramePedidosPendientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FramePedidosPendientesLayout.createSequentialGroup()
-                .addGroup(FramePedidosPendientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(FramePedidosPendientesLayout.createSequentialGroup()
-                        .addGroup(FramePedidosPendientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(FramePedidosPendientesLayout.createSequentialGroup()
-                                .addGap(150, 150, 150)
-                                .addComponent(lblPedidosPendientes))
-                            .addGroup(FramePedidosPendientesLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(btnRegresarPP)))
-                        .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FramePedidosPendientesLayout.createSequentialGroup()
+                .addGroup(FramePedidosPendientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(FramePedidosPendientesLayout.createSequentialGroup()
                         .addContainerGap()
+                        .addComponent(scrpPedidosPP))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, FramePedidosPendientesLayout.createSequentialGroup()
+                        .addGap(136, 136, 136)
+                        .addComponent(lblPedidosPendientes)
+                        .addGap(0, 161, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, FramePedidosPendientesLayout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(FramePedidosPendientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(scrpPedidosPP)
                             .addGroup(FramePedidosPendientesLayout.createSequentialGroup()
-                                .addComponent(txtfPedidoRevisarPP, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnRegresarPP)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnRegresarPedidosPP))
+                            .addGroup(FramePedidosPendientesLayout.createSequentialGroup()
+                                .addGroup(FramePedidosPendientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblPedidoRevisarPP)
+                                    .addComponent(lblPedidoEnviarPP))
                                 .addGap(18, 18, 18)
-                                .addComponent(btnRevisarPP, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)))))
+                                .addGroup(FramePedidosPendientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtfPedidoRevisarPP, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
+                                    .addComponent(txtfPedidoEnviarPP))
+                                .addGap(18, 18, 18)
+                                .addGroup(FramePedidosPendientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnEnviadoPP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnRevisarPP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addContainerGap())
         );
         FramePedidosPendientesLayout.setVerticalGroup(
@@ -819,15 +871,23 @@ public class MenuJFrame extends javax.swing.JFrame {
             .addGroup(FramePedidosPendientesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblPedidosPendientes)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(scrpPedidosPP, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(FramePedidosPendientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblPedidoRevisarPP)
                     .addComponent(txtfPedidoRevisarPP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnRevisarPP))
-                .addGap(18, 18, 18)
-                .addComponent(btnRegresarPP)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(FramePedidosPendientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEnviadoPP)
+                    .addComponent(lblPedidoEnviarPP)
+                    .addComponent(txtfPedidoEnviarPP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(11, 11, 11)
+                .addGroup(FramePedidosPendientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnRegresarPP)
+                    .addComponent(btnRegresarPedidosPP))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -927,21 +987,25 @@ public class MenuJFrame extends javax.swing.JFrame {
 
     private void btnFrameRegistrarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFrameRegistrarPedidoActionPerformed
         // TODO add your handling code here:
+        FrameRegistrarPedido.setSize(WIDTH+50, HEIGHT+300);
         FrameRegistrarPedido.setVisible(true);
     }//GEN-LAST:event_btnFrameRegistrarPedidoActionPerformed
 
     private void btnFrameRegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFrameRegistrarClienteActionPerformed
         // TODO add your handling code here:
+        FrameRegistrarCliente.setSize(WIDTH, HEIGHT);
         FrameRegistrarCliente.setVisible(true);
     }//GEN-LAST:event_btnFrameRegistrarClienteActionPerformed
 
     private void btnFrameCancelarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFrameCancelarPedidoActionPerformed
         // TODO add your handling code here:
+        FrameCancelarPedido.setSize(WIDTH, HEIGHT);
         FrameCancelarPedido.setVisible(true);
     }//GEN-LAST:event_btnFrameCancelarPedidoActionPerformed
 
     private void btnFrameGenerarReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFrameGenerarReporteActionPerformed
         // TODO add your handling code here:
+        FrameGenerarReporte.setSize(WIDTH, HEIGHT-100);
         FrameGenerarReporte.setVisible(true);
     }//GEN-LAST:event_btnFrameGenerarReporteActionPerformed
 
@@ -963,6 +1027,7 @@ public class MenuJFrame extends javax.swing.JFrame {
 
     private void btnFrameEditarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFrameEditarPedidoActionPerformed
         // TODO add your handling code here:
+        FrameEditarPedido.setSize(WIDTH, HEIGHT);
         FrameEditarPedido.setVisible(true);
     }//GEN-LAST:event_btnFrameEditarPedidoActionPerformed
 
@@ -985,18 +1050,7 @@ public class MenuJFrame extends javax.swing.JFrame {
 
     private void btnRegresarRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarRPActionPerformed
         // TODO add your handling code here:
-        txtfClienteRP.setText("");
-        txtfProductoRP.setText("");
-        txtfCantidadRP.setText("");
-        txtaPedidosRP.setText("");
-        lblNombreClienteRP.setText("Nombre:");
-        lblTelefonoClienteRP.setText("Teléfono:");
-        lblDireccionClienteRP.setText("Dirreción:");
-        lblNombreProductoRP.setText("Nombre:");
-        lblCantidadProductoRP.setText("Stock:");
-        lblPrecioProductoRP.setText("Precio");
-        lblPrecioPedidoRP.setText("Precio");
-        lblIdentificadorPedidoRP.setText("Identificador del Pedido:");
+        mostrarRegistrarPedido();
         FrameRegistrarPedido.setVisible(false);
     }//GEN-LAST:event_btnRegresarRPActionPerformed
 
@@ -1024,29 +1078,39 @@ public class MenuJFrame extends javax.swing.JFrame {
         cliente.setClave(txtfTelefonoRC.getText());
         
         // Agregar cliente a arraylist
-        clientes.add(cliente);
-        
-        lblNumeroIdentificacionRC.setText("Número identificador: "+cliente.getClave());
-        
+        if(cliente.validarCliente()) {
+            clientes.add(cliente);
+            lblNumeroIdentificacionRC.setText("Número identificador: "+cliente.getClave());
+        } else {
+            lblNumeroIdentificacionRC.setText("Llena todos los campos");
+        }
         //FrameRegistrarCliente.setVisible(false);
     }//GEN-LAST:event_btnRegistrarClienteActionPerformed
 
     private void btnComprobarClienteRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprobarClienteRPActionPerformed
         // TODO add your handling code here:
         String idCliente = txtfClienteRP.getText();
-        Cliente cliente = new Cliente();
-        
-        //BUSCAR EL CLIENTE EN LA BD
-        for(int i=0; i<clientes.size(); ++i) {
-            cliente = clientes.get(i);
-            if(idCliente.equals(cliente.getClave())) {
-                break;
+        if(idCliente==null) {
+            lblNombreClienteRP.setText("INTRODUCE UN IDENTIFICADOR");
+        } else {
+            Cliente cliente = new Cliente();
+
+            //BUSCAR EL CLIENTE EN LA BD
+            for(int i=0; i<clientes.size(); ++i) {
+                if(idCliente.equals(clientes.get(i).getClave())) {
+                    cliente = clientes.get(i);
+                    break;
+                }
+            }
+
+            if (cliente.validarCliente()) {
+                lblNombreClienteRP.setText("Nombre: "+cliente.getNombre());
+                lblTelefonoClienteRP.setText("Teléfono: "+cliente.getTelefono());
+                lblDireccionClienteRP.setText("Dirección: "+cliente.getDireccion());
+            } else {
+                lblNombreClienteRP.setText("IDENTIFICADOR NO VALIDO");
             }
         }
-        
-        lblNombreClienteRP.setText("Nombre: "+cliente.getNombre());
-        lblTelefonoClienteRP.setText("Teléfono: "+cliente.getTelefono());
-        lblDireccionClienteRP.setText("Dirección: "+cliente.getDireccion());
     }//GEN-LAST:event_btnComprobarClienteRPActionPerformed
 
     private void btnComprobarProductoRPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprobarProductoRPActionPerformed
@@ -1056,8 +1120,9 @@ public class MenuJFrame extends javax.swing.JFrame {
         
         //BUSCAR EL PRODUCTO EN EL ARRAYLIST
         for(int i=0; i<productos.size(); ++i) {
-            producto = productos.get(i);
-            if(idProducto.equals(producto.getClave())) {
+            
+            if(idProducto.equals(productos.get(i).getClave())) {
+                producto = productos.get(i);
                 break;
             }
         }
@@ -1082,8 +1147,8 @@ public class MenuJFrame extends javax.swing.JFrame {
         int cantidad = Integer.parseInt(txtfCantidadRP.getText());
         
         for(int i=0; i<productos.size(); ++i) {
-            producto = productos.get(i);
-            if(idProducto.equals(producto.getClave())) {
+            if(idProducto.equals(productos.get(i).getClave())) {
+                producto = productos.get(i);
                 break;
             }
         }
@@ -1112,49 +1177,29 @@ public class MenuJFrame extends javax.swing.JFrame {
         pedido.setClave(Integer.toString(clavePedidos));
         pedido.setClaveCliente(txtfClienteRP.getText());
         
+        pedido.setEstado("pendiente");
         //numProdPedido = 0;
         
         //FrameRegistrarPedido.setVisible(false);
     }//GEN-LAST:event_btnRegistrarPedidoRPActionPerformed
 
     private void btnBuscarClienteCPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarClienteCPActionPerformed
-        // TODO add your handling code here:
-        String idCliente = txtfClienteCP.getText();
-        Pedido pedido = new Pedido();
         
-        //BUSCAR PEDIDOS QUE TENGA EL CLIENTE EN LA BD
-        for(int i=0; i<pedidos.size(); ++i) {
-            pedido = pedidos.get(i);
-            if(idCliente.equals(pedido.getClaveCliente())) {
-                break;
-            }
-        }
-        
-        //Agregar datos del pedido al text area
     }//GEN-LAST:event_btnBuscarClienteCPActionPerformed
 
     private void btnCancelarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarPedidoActionPerformed
-        // TODO add your handling code here:
-        String idPedido = txtfPedidoCancelarCP.getText();
         
-        //ELIMINAR PEDIDO DE LA BASE DE DATOS
-        for(int i=0; i<pedidos.size(); ++i) {
-            if(idPedido.equals(pedidos.get(i).getClave())) {
-                pedidos.remove(i);
-                break;
-            }
-        }
-        
-        FrameCancelarPedido.setVisible(false);
     }//GEN-LAST:event_btnCancelarPedidoActionPerformed
 
     private void btnFrameFinalizarPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFrameFinalizarPedidoActionPerformed
         // TODO add your handling code here:
+        FrameFinalizarPedido.setSize(WIDTH, HEIGHT);
         FrameFinalizarPedido.setVisible(true);
     }//GEN-LAST:event_btnFrameFinalizarPedidoActionPerformed
 
     private void btnFramePedidosPendientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFramePedidosPendientesActionPerformed
         // TODO add your handling code here:
+        FramePedidosPendientes.setSize(WIDTH, HEIGHT);
         FramePedidosPendientes.setVisible(true);
     }//GEN-LAST:event_btnFramePedidosPendientesActionPerformed
 
@@ -1168,29 +1213,36 @@ public class MenuJFrame extends javax.swing.JFrame {
 
     private void btnRegresarPPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarPPActionPerformed
         // TODO add your handling code here:
+        txtaPedidosPP.setText("");
+        txtfPedidoRevisarPP.setText("");
+        txtfPedidoEnviarPP.setText("");
         FramePedidosPendientes.setVisible(false);
     }//GEN-LAST:event_btnRegresarPPActionPerformed
 
     private void btnRevisarPPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRevisarPPActionPerformed
         // TODO add your handling code here:
+        txtaPedidosPP.setText("");
         String idPedido = txtfPedidoRevisarPP.getText();
         Pedido pedido = new Pedido();
         
         for(int i=0; i<pedidos.size(); ++i) {
-            pedido = pedidos.get(i);
-            if(idPedido.equals(pedido.getClave())) {
+            if(idPedido.equals(pedidos.get(i).getClave())) {
+                pedido = pedidos.get(i);
                 break;
             }
         }
         
         //Desplegar datos de pedido en text area
-        txtaPedidosPP.append(pedido.getClaveCliente());
+        txtfPedidoRevisarPP.setText("");
+        txtaPedidosPP.append("# Pedido: "+pedido.getClave()+"\n");
+        txtaPedidosPP.append("Cliente: "+pedido.getClaveCliente()+"\n");
+        txtaPedidosPP.append("Productos:\n");
         for(int i=0; i<pedido.getSizeProductos(); ++i) {
-            txtaPedidosPP.append(pedido.getClaveProducto(i)+
+            txtaPedidosPP.append(pedido.getClaveProducto(i).getNombre()+
                                  "\t"+
-                                 Integer.toString(pedido.getCantidadProducto(i)));
+                                 Integer.toString(pedido.getCantidadProducto(i))+"\n");
         }
-        txtaPedidosPP.append(Integer.toString(pedido.getTotal()));
+        txtaPedidosPP.append("Total: $"+Integer.toString(pedido.getTotal())+"\n");
     }//GEN-LAST:event_btnRevisarPPActionPerformed
 
     private void btnRegresarFPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarFPActionPerformed
@@ -1202,6 +1254,67 @@ public class MenuJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtfCantidadRPActionPerformed
 
+    private void txtfPedidoRevisarPPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfPedidoRevisarPPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtfPedidoRevisarPPActionPerformed
+
+    private void FramePedidosPendientesComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_FramePedidosPendientesComponentShown
+        // TODO add your handling code here:
+        mostrarPedidosPendientes();
+    }//GEN-LAST:event_FramePedidosPendientesComponentShown
+
+    private void btnEnviadoPPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviadoPPActionPerformed
+        // TODO add your handling code here:
+        String idPedido = txtfPedidoEnviarPP.getText();
+        Pedido pedido = new Pedido();
+        for(int i=0; i<pedidos.size(); ++i) {
+            pedido = pedidos.get(i);
+            if(idPedido.equals(pedido.getClave())) {
+                pedido.setEstado("enviado");
+                break;
+            }
+        }
+        mostrarPedidosPendientes();
+    }//GEN-LAST:event_btnEnviadoPPActionPerformed
+
+    private void btnRegresarPedidosPPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarPedidosPPActionPerformed
+        // TODO add your handling code here:
+        mostrarPedidosPendientes();
+    }//GEN-LAST:event_btnRegresarPedidosPPActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        mostrarRegistrarPedido();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void mostrarPedidosPendientes() {
+        txtaPedidosPP.setText("");
+                
+        Pedido pedido = new Pedido();
+        for(int i=0; i<pedidos.size(); ++i) {
+            pedido = pedidos.get(i);
+            if(pedido.getEstado().equals("pendiente")) {
+                txtaPedidosPP.append("# Pedido: "+pedido.getClave()+"\t"+
+                                     "Cliente: "+pedido.getClaveCliente()+"\n");
+            }
+        }
+    }
+    
+    private void mostrarRegistrarPedido() {
+        txtfClienteRP.setText("");
+        txtfProductoRP.setText("");
+        txtfCantidadRP.setText("");
+        txtaPedidosRP.setText("");
+        lblNombreClienteRP.setText("Nombre:");
+        lblTelefonoClienteRP.setText("Teléfono:");
+        lblDireccionClienteRP.setText("Dirreción:");
+        lblNombreProductoRP.setText("Nombre:");
+        lblCantidadProductoRP.setText("Stock:");
+        lblPrecioProductoRP.setText("Precio");
+        lblPrecioPedidoRP.setText("Precio");
+        lblIdentificadorPedidoRP.setText("Identificador del Pedido:");
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -1254,6 +1367,7 @@ public class MenuJFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnComprobarClienteRP;
     private javax.swing.JButton btnComprobarProductoRP;
     private javax.swing.JButton btnEliminarProductoEP;
+    private javax.swing.JButton btnEnviadoPP;
     private javax.swing.JButton btnFinalizarPedidoFP;
     private javax.swing.JButton btnFrameCancelarPedido;
     private javax.swing.JButton btnFrameEditarPedido;
@@ -1270,10 +1384,12 @@ public class MenuJFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnRegresarFP;
     private javax.swing.JButton btnRegresarGR;
     private javax.swing.JButton btnRegresarPP;
+    private javax.swing.JButton btnRegresarPedidosPP;
     private javax.swing.JButton btnRegresarRC;
     private javax.swing.JButton btnRegresarRP;
     private javax.swing.JButton btnRevisarPP;
     private javax.swing.JComboBox<String> cmbbPeriodoGR;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -1293,6 +1409,8 @@ public class MenuJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lblNombreProductoRP;
     private javax.swing.JLabel lblNombreRC;
     private javax.swing.JLabel lblNumeroIdentificacionRC;
+    private javax.swing.JLabel lblPedidoEnviarPP;
+    private javax.swing.JLabel lblPedidoRevisarPP;
     private javax.swing.JLabel lblPedidosPendientes;
     private javax.swing.JLabel lblPeriodoRevisarGR;
     private javax.swing.JLabel lblPrecioPedidoRP;
@@ -1324,6 +1442,7 @@ public class MenuJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField txtfNombreRC;
     private javax.swing.JTextField txtfPedidoCancelarCP;
     private javax.swing.JTextField txtfPedidoEP;
+    private javax.swing.JTextField txtfPedidoEnviarPP;
     private javax.swing.JTextField txtfPedidoFP;
     private javax.swing.JTextField txtfPedidoRevisarPP;
     private javax.swing.JTextField txtfProductoRP;

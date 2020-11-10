@@ -58,11 +58,12 @@ public class Cliente {
      * @param cliente A not-null instancia de Cliente
      * @return Un boleano que indica que los valores de cliente son validos
      */
-    public boolean validarCliente(Cliente cliente) {
-        if(cliente==null || cliente.getClave()==null || cliente.getNombre()==null ||
-           cliente.getTelefono()==null || cliente.getDireccion()==null)
+    public boolean validarCliente() {
+        if(_clave==null || _direccion==null ||
+           _nombre==null || _telefono==null) {
             return false;
-
+        }
+        
         return true;
     }
     

@@ -21,7 +21,7 @@
                                       <Component id="lblTelefonoClienteRP" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="lblDireccionClienteRP" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="0" pref="364" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -36,30 +36,23 @@
                                       <Component id="txtfProductoRP" alignment="1" max="32767" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="lblCantidadPedidoRP" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="32767" attributes="0"/>
+                                          <EmptySpace pref="45" max="32767" attributes="0"/>
                                           <Component id="lblPrecioProductoPedidoRP" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="txtfCantidadRP" alignment="1" max="32767" attributes="0"/>
                                   </Group>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="btnAgregarProductoRP" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="lblDineroProductoRP" max="32767" attributes="0"/>
-                                                      <EmptySpace max="-2" attributes="0"/>
-                                                      <Component id="lblPrecioProductoRP" min="-2" pref="71" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Component id="btnComprobarProductoRP" min="-2" max="-2" attributes="0"/>
-                                              </Group>
+                                      <Component id="btnAgregarProductoRP" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="lblDineroProductoRP" max="32767" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="lblPrecioProductoRP" min="-2" pref="71" max="-2" attributes="0"/>
                                           </Group>
+                                          <Component id="btnComprobarProductoRP" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                                          <Component id="btnComprobarClienteRP" min="-2" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="btnComprobarClienteRP" alignment="1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -86,6 +79,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="btnRegresarRP" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                           <Component id="btnRegistrarPedidoRP" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -154,6 +149,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnRegresarRP" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnRegistrarPedidoRP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="22" max="32767" attributes="0"/>
               </Group>
@@ -318,6 +314,14 @@
             <Property name="text" type="java.lang.String" value="Cantidad a agregar"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JButton" name="jButton1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nuevo Pedido"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+          </Events>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JFrame" name="FrameRegistrarCliente">
@@ -401,7 +405,7 @@
                       <Component id="btnRegresarRC" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnRegistrarCliente" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="90" max="32767" attributes="0"/>
+                  <EmptySpace pref="88" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -618,7 +622,7 @@
                       <Component id="cmbbPeriodoGR" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="lblPeriodoRevisarGR" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="82" max="32767" attributes="0"/>
+                  <EmptySpace pref="103" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnGenerarReporte" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnRegresarGR" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -709,7 +713,7 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="txtfEliminarProductoEP" max="32767" attributes="0"/>
-                                      <Component id="txtfAgregarProductoEP" pref="244" max="32767" attributes="0"/>
+                                      <Component id="txtfAgregarProductoEP" pref="247" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -930,33 +934,47 @@
       </SubComponents>
     </Container>
     <Container class="javax.swing.JFrame" name="FramePedidosPendientes">
+      <Events>
+        <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="FramePedidosPendientesComponentShown"/>
+      </Events>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
-                                  <Component id="lblPedidosPendientes" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="btnRegresarPP" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
+                          <Component id="scrpPedidosPP" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
+                          <Component id="lblPedidosPendientes" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="161" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="scrpPedidosPP" max="32767" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <Component id="txtfPedidoRevisarPP" min="-2" pref="275" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="btnRegresarPP" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="btnRegresarPedidosPP" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblPedidoRevisarPP" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblPedidoEnviarPP" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="btnRevisarPP" pref="87" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txtfPedidoRevisarPP" pref="184" max="32767" attributes="0"/>
+                                      <Component id="txtfPedidoEnviarPP" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="btnEnviadoPP" max="32767" attributes="0"/>
+                                      <Component id="btnRevisarPP" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
@@ -970,16 +988,26 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lblPedidosPendientes" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="scrpPedidosPP" min="-2" pref="150" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lblPedidoRevisarPP" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtfPedidoRevisarPP" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnRevisarPP" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="btnRegresarPP" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="25" max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btnEnviadoPP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblPedidoEnviarPP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtfPedidoEnviarPP" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="btnRegresarPP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnRegresarPedidosPP" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -1014,9 +1042,9 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtfPedidoRevisarPP">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Identificador de pedido a revisar"/>
-          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtfPedidoRevisarPPActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnRevisarPP">
           <Properties>
@@ -1025,6 +1053,34 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRevisarPPActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblPedidoRevisarPP">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pedido a revisar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnRegresarPedidosPP">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Regresar a Pedidos"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegresarPedidosPPActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnEnviadoPP">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Enviado"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEnviadoPPActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblPedidoEnviarPP">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pedido a envar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtfPedidoEnviarPP">
         </Component>
       </SubComponents>
     </Container>
