@@ -27,18 +27,13 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblProductoPedidoRP" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblRespuestaAgregarRP" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="txtfClienteRP" max="32767" attributes="0"/>
                                       <Component id="txtfProductoRP" alignment="1" max="32767" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="lblCantidadPedidoRP" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace pref="45" max="32767" attributes="0"/>
-                                          <Component id="lblPrecioProductoPedidoRP" min="-2" max="-2" attributes="0"/>
-                                      </Group>
                                       <Component id="txtfCantidadRP" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
@@ -78,7 +73,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="btnRegresarRP" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="48" max="32767" attributes="0"/>
                           <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                           <Component id="btnRegistrarPedidoRP" min="-2" max="-2" attributes="0"/>
@@ -130,11 +125,7 @@
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lblProductoPedidoRP" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblCantidadPedidoRP" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblPrecioProductoPedidoRP" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="lblRespuestaAgregarRP" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="scrpPedidosRP" min="-2" pref="100" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -193,19 +184,9 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtfCantidadRPActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="lblProductoPedidoRP">
+        <Component class="javax.swing.JLabel" name="lblRespuestaAgregarRP">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Producto"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblCantidadPedidoRP">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Cantidad"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="lblPrecioProductoPedidoRP">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Precio"/>
+            <Property name="text" type="java.lang.String" value="-----------"/>
           </Properties>
         </Component>
         <Container class="javax.swing.JScrollPane" name="scrpPedidosRP">
@@ -958,6 +939,8 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="btnRegresarPP" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="lblRespuestaPP" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                                   <Component id="btnRegresarPedidosPP" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -1006,6 +989,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnRegresarPP" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btnRegresarPedidosPP" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblRespuestaPP" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -1082,6 +1066,11 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtfPedidoEnviarPP">
         </Component>
+        <Component class="javax.swing.JLabel" name="lblRespuestaPP">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="-------------------------"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
   </NonVisualComponents>
@@ -1119,7 +1108,9 @@
                   <Component id="btnFrameFinalizarPedido" alignment="2" min="-2" max="-2" attributes="0"/>
                   <Component id="btnFramePedidosPendientes" alignment="2" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="120" max="32767" attributes="0"/>
+              <EmptySpace pref="39" max="32767" attributes="0"/>
+              <Component id="btnGuardar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -1127,8 +1118,11 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="lblMenu" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblMenu" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnGuardar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
               <Component id="btnFrameRegistrarCliente" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnFrameRegistrarPedido" min="-2" max="-2" attributes="0"/>
@@ -1142,7 +1136,7 @@
               <Component id="btnFramePedidosPendientes" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnFrameGenerarReporte" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="38" max="32767" attributes="0"/>
+              <EmptySpace pref="25" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -1208,6 +1202,11 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFramePedidosPendientesActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnGuardar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Guardar"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
