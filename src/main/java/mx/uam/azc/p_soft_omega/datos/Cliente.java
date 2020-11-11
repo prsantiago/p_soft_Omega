@@ -54,13 +54,12 @@ public class Cliente {
     }
 
     /**
-     * Validar los datos de un usuario antes de insertar o modificar
-     * @param cliente A not-null instancia de Cliente
+     * Validar los datos de un cliente antes de insertar o modificar
      * @return Un boleano que indica que los valores de cliente son validos
      */
     public boolean validarCliente() {
-        if(_clave==null || _direccion==null ||
-           _nombre==null || _telefono==null) {
+        if(_clave.equals("") || _direccion.equals("") ||
+           _nombre.equals("") || _telefono.equals("")) {
             return false;
         }
         
