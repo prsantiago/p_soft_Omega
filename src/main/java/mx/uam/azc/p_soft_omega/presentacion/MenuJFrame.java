@@ -5,6 +5,13 @@
  */
 package mx.uam.azc.p_soft_omega.presentacion;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import mx.uam.azc.p_soft_omega.datos.Cliente;
 import mx.uam.azc.p_soft_omega.datos.Pedido;
 import mx.uam.azc.p_soft_omega.datos.Producto;
@@ -14,19 +21,19 @@ import java.util.ArrayList;
  *
  * @author Santiago PG
  */
-public class MenuJFrame extends javax.swing.JFrame {
+public class MenuJFrame extends javax.swing.JFrame implements Serializable {
     
     private static final int WIDTH = 450;
     private static final int HEIGHT = 350;
     
     ArrayList<Cliente> clientes = new ArrayList<Cliente>();
     ArrayList<Producto> productos = new ArrayList<Producto>();
-    String[] nombreProducto = {"Coca Cola", "Doritos", "Tostitos", "Chocoroles", "Cigarros",
+    /*String[] nombreProducto = {"Coca Cola", "Doritos", "Tostitos", "Chocoroles", "Cigarros",
                                "Paleta Magnum", "Panditas", "Carlos V", "Cerveza", "Jamon",
                                "Queso", "Tortillas", "Huevo", "Pan", "Agua"};
     int[] precioProducto = {30, 15, 20, 13, 60,
                             30, 10, 7, 90, 25,
-                            25, 12, 18, 33, 13};
+                            25, 12, 18, 33, 13};*/
     ArrayList<Pedido> pedidos = new ArrayList<Pedido>();
     //int numProdPedido = 0;
     int clavePedidos = 0;
@@ -37,6 +44,25 @@ public class MenuJFrame extends javax.swing.JFrame {
     public MenuJFrame() {
         initComponents();
         
+        // Deserializar
+        try{
+            FileInputStream fis = new FileInputStream("datos.ser");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            clientes = (ArrayList<Cliente>) ois.readObject();
+            productos = (ArrayList<Producto>) ois.readObject();
+            pedidos = (ArrayList<Pedido>) ois.readObject();
+            clavePedidos = (int) ois.readObject();
+            ois.close(); fis.close();
+        }catch(FileNotFoundException e){
+            e.printStackTrace();
+        }catch(IOException e){
+            e.printStackTrace();
+        }catch(ClassNotFoundException e){
+            e.printStackTrace();
+        }
+        
+        /* Para editar el arrayList de productos 
+            al editar el arreglo de productos y/o cantidad y/o precio
         
         for(int i=0; i<nombreProducto.length; ++i) {
             Producto producto = new Producto();
@@ -46,7 +72,7 @@ public class MenuJFrame extends javax.swing.JFrame {
             producto.setCantidad(20);
             
             productos.add(producto);
-        }
+        }*/
     }
 
     /**
@@ -938,6 +964,11 @@ public class MenuJFrame extends javax.swing.JFrame {
         });
 
         btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1325,6 +1356,23 @@ public class MenuJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         mostrarRegistrarPedido();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        // Serializacion
+        try{
+            FileOutputStream fs = new FileOutputStream("datos.ser");
+            ObjectOutputStream os = new ObjectOutputStream(fs);
+            os.writeObject(clientes);
+            os.writeObject(productos);
+            os.writeObject(pedidos);
+            os.writeObject(clavePedidos);
+            os.close();
+        }catch(FileNotFoundException e){
+            e.printStackTrace();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void limpiarPedidosPendientes() {
         lblRespuestaPP.setText("-------------------------");

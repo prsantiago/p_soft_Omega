@@ -1,12 +1,13 @@
 package mx.uam.azc.p_soft_omega.datos;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author Omega
  */
-public class Pedido {
+public class Pedido implements Serializable {
     
     private String _clave;
     private String _claveCliente;

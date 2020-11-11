@@ -1,10 +1,12 @@
 package mx.uam.azc.p_soft_omega.datos;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Omega
  */
-public class Producto {
+public class Producto implements Serializable {
     
     private String _clave;
     private String _nombre;
